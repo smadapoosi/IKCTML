@@ -49,3 +49,13 @@ There are also various other csvs and objects created in the script, but they ar
 If you have any questions or run into issues please leave write your problem in the issues tab or contact the maintainers.
 
 Maintainers: Stephen Blough <bloughst@umich.edu> & Adam Tisch <adtisch@umich.edu>
+
+### Citations
+Our Merged Kidney Dataset used a combination of datasets and studies from:
+- Menon et al.
+- Lake et al.
+- Wu et al.
+- Liao et al.
+- Young et al.
+
+
