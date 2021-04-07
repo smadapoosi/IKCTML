@@ -1,4 +1,4 @@
-# Identification-of-Cell-Types-in-scRNA-seq-Using-Machine-Learning-Algorithms
+# Identification of Cell Types in scRNA-seq Data Using Machine Learning Algorithms
 
 ## Introduction
 Our Scripts and Snakefile will create important files including the percent unknown and and median f1 scores for every dataset used in one of our five chosen machine learning  algorithms. Also included are confusion matrices, and a cell-by-cell breakdown of the percent unknown for each training dataset and algorithm used.
