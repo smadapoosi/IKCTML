@@ -1,8 +1,5 @@
 
 
-"""
-One rule to... rule... them all...
-"""
 rule all:
   input:
       "confusion/ukdf.csv"
