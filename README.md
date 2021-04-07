@@ -13,7 +13,7 @@ Most of the Algorithms we opted for are based in the python sklearn:
 
 ## How to Use
 
-Start by downloadng our dataset MergedObject.RDS from [zenodo] ()
+Start by downloadng our dataset MergedObject.RDS from [zenodo] (https://zenodo.org/record/4671060#.YG5Dby1h0YI)
 
 Make sure the dataset is placed in a directory named data inside the root repository so that you can access it by data/ from the directory containing the Snakefile. (i.e. if root directory was named home, data should be on the path home/data/)
 
