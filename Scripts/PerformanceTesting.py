@@ -204,7 +204,7 @@ tobemapped = formatting(tobemapped)
 # In[9]:
 
 
-tobemapped.to_csv('tobemapped.csv')
+tobemapped.to_csv('scores/tobemapped.csv')
 
 
 # In[12]:
@@ -240,7 +240,7 @@ ukdf.to_csv('confusion/ukdf.csv')
 
 
 for i in range(5):
-    anndata = sc.read('svmtest{}.h5ad'.format(withoutnames[i+1]))
+    anndata = sc.read(argv[i+1])
     anndata = rename(anndata)
     print(anndata.obs['Study'])
 
@@ -265,6 +265,6 @@ sns.heatmap(tobemapped, annot = True, cmap='RdYlGn', robust = True)
 
 import pickle
 
-with open('mypickle.pickle', 'wb') as f:
+with open('scores/mypickle.pickle', 'wb') as f:
     pickle.dump(resultslist, f)
 

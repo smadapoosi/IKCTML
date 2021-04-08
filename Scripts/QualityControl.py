@@ -55,7 +55,7 @@ resultslist['rejection'] = len(predicted[predicted == 'Unknown'])/len(predicted)
 # In[ ]:
 
 
-resultslist['confusion'].to_csv('QCSVMConfusion.csv')
+resultslist['confusion'].to_csv('data/QCSVMConfusion.csv')
 percentunknown = resultslist['confusion']['Unknown']/resultslist['confusion'].sum(axis=0)
 percentunknown.to_csv('confusion/UnknownpercentsvmQCconfusion.csv')
 
