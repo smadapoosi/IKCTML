@@ -37,11 +37,11 @@ snakemake --use-singularity --cores <n cores>
 ## Results
 Here's what to expect when process finishes:
 1. (File 1 IntegrateAll) Integration of all five datasets
-        * Input: Merged Object pre-QC cells
-        * Output: Integrated h5ad object of pre-QC cells, quality control report
+       * Input: Merged Object pre-QC cells
+       * Output: Integrated h5ad object of pre-QC cells, quality control report
 2. (File 2 QualityControl) SVM quality control
-        1. Input is Integrated object of 62000 cells
-        2. Output is a CSV of True or False from Quality control
+       * Input is Integrated object of 62000 cells
+       * Output is a CSV of True or False from Quality control
 3. (File 3 IntegrateSome) Integration of 4 datasets and then with the last one separately
         1. Input: Merged Object, and QC csv
         2. Output: 5 h5ad objects, each of which is different
