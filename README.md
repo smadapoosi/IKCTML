@@ -34,26 +34,28 @@ Finally, type in this command to run the script:
 ```
 snakemake --use-singularity --cores <n cores>
 ```
-## Results
-Here's what to expect when process finishes:
+## To Reproduce Our Results
+Here's what happening beneath the hood:
 1. (File 1 IntegrateAll) Integration of all five datasets
-       * Input: Merged Object pre-QC cells
-       * Output: Integrated h5ad object of pre-QC cells, quality control report
-
+* Input: Merged RDS Seurat Object pre-QC cells
+* Output: Integrated h5ad object of pre-QC cells
 2. (File 2 QualityControl) SVM quality control
-       * Input is Integrated object of 62000 cells
-       * Output is a CSV of True or False from Quality control
+* Input: Integrated h5ad object of pre-QC cells from 1
+* Output: a CSV of binary cell designations from Quality control
 3. (File 3 IntegrateSome) Integration of 4 datasets and then with the last one separately
-        1. Input: Merged Object, and QC csv
-        2. Output: 5 h5ad objects, each of which is different
+* Input: Merged RDS Seurat Object pre-QC cells and CSV of binary cell designations from Quality control
+* Output: 5 h5ad objects, each of which is is first integrated with four of the datsets and then again with last one, which will simulate a query dataset
 4. (File 4 PerformanceTesting) SVM Performance testing
-        1. Input is 5 h5ad objects 
-        2. Output is the Figures (unknown percent and f1 scores, confusion matrix, cell by cell unknown percent)
+* Input: 5 h5ad objects from 3
+* Output: our figures and classification report (unknown percentages, f1 scores, and confusion matricies)
 
-There are also various other csvs and objects created in the script, but they are less important
+## To Query our Reference
+
+
+
 
 ## Questions and Issues
-If you have any questions or run into issues please leave write your problem in the issues tab or contact the maintainers.
+If you have any questions or run into issues please leave your problem in the issues tab or contact the maintainers.
 
 Maintainers: Stephen Blough <bloughst@umich.edu> & Adam Tisch <adtisch@umich.edu>
 
