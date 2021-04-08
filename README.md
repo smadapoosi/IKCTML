@@ -17,7 +17,7 @@ We tested 5 algorithms for cell type classification, each following a rejection 
 - KNeighbors
 - XGB
 
-## How to Use
+## To Reproduce Our Results
 
 Start by downloadng our dataset MergedObject.RDS from [zenodo](https://zenodo.org/record/4671060#.YG5Dby1h0YI).
 
@@ -34,7 +34,6 @@ Finally, type in this command to run the script:
 ```
 snakemake --use-singularity --cores <n cores>
 ```
-## To Reproduce Our Results
 Here's what happening beneath the hood:
 1. (File 1 IntegrateAll) Integration of all five datasets
 * Input: Merged RDS Seurat Object pre-QC cells
@@ -49,7 +48,7 @@ Here's what happening beneath the hood:
 * Input: 5 h5ad objects from 3
 * Output: our figures and classification report (unknown percentages, f1 scores, and confusion matricies)
 
-## To Query our Reference
+## To Query Our Reference
 
 
 
