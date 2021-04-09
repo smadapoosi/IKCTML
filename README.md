@@ -36,8 +36,8 @@ snakemake --use-singularity --cores <n cores>
 ```
 Here's what happening beneath the hood:
 1. (File 1 IntegrateAll) Integration of all five datasets
-* Input: Merged RDS Seurat Object pre-QC cells
-* Output: Integrated h5ad object of pre-QC cells
+  - Input: Merged RDS Seurat Object pre-QC cells
+  - Output: Integrated h5ad object of pre-QC cells
 2. (File 2 QualityControl) SVM quality control
 * Input: Integrated h5ad object of pre-QC cells from 1
 * Output: a CSV of binary cell designations from Quality control
