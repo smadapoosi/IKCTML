@@ -11,7 +11,7 @@ Our performance testing workflow can be replicated with our Snakefile, which int
 
 ### Included Algorithms
 We tested 5 algorithms for cell type classification, each following a rejection model where cells with low classification probabilities are marked as unknown:
-- SVM
+- SVC
 - RandomForest
 - MLP
 - KNeighbors

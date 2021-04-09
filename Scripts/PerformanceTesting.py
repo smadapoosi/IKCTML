@@ -204,7 +204,7 @@ tobemapped = formatting(tobemapped)
 # In[9]:
 
 
-tobemapped.to_csv('scores/tobemapped.csv')
+tobemapped.to_csv('scores/F1_scores.csv')
 
 
 # In[12]:
@@ -248,23 +248,27 @@ for i in range(5):
 # In[47]:
 
 
-cmap = sns.color_palette('RdYlGn_r', as_cmap = True)
 ukdf1 = ukdf * 100
+cmap = sns.color_palette('coolwarm_r', as_cmap = True)
+sns.set_theme(font_scale = 3)
+plt.figure(figsize=(20,15))
 sns.heatmap(ukdf1, annot=True, cmap = cmap, robust = True)
-
+plt.savefig("confusion/Percent_Unknown_heatmap.pdf")
 
 # In[45]:
 
 
-cmap = sns.color_palette('RdYlGn', as_cmap = True)
-sns.heatmap(tobemapped, annot = True, cmap='RdYlGn', robust = True)
-
+cmap = sns.color_palette('coolwarm', as_cmap = True)
+sns.set_theme(font_scale = 3)
+plt.figure(figsize=(20,15))
+sns.heatmap(tobemapped, annot = True, cmap=cmap, robust = True)
+plt.savefig("scores/Median_F1_heatmap.pdf")
 
 # In[21]:
 
-
-import pickle
-
-with open('scores/mypickle.pickle', 'wb') as f:
-    pickle.dump(resultslist, f)
+datasetlist = ['Lake','Liao','Menon','Wu','Young']
+algorithmlist = ['SVC','RandomForest','MLP','KNeighbor','XGB']
+for i in range(len(resultslist)):
+    for j in range(len(resultslist[i])):
+        resultslist[i][j].to_csv('confusion/{}/{}_{}_confusion.csv'.format(algorithmlist[j], datasetlist[i], algorithmlist[j]))
 
