@@ -50,6 +50,13 @@ Here's what happening beneath the hood:
 
 ## To Query Our Reference
 
+The best performing annotation protocol from our performance testing showed an average median F1 score 
+
+First, create a [Seurat](https://satijalab.org/seurat/articles/pbmc3k_tutorial.html) object for your data. 
+
+Second, download our integrated reference from [Zenodo]() and upload both our reference and your data to Google Drive.
+
+Third, open our colab workflow here, and follow the included instructions. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb)
 
 
 
