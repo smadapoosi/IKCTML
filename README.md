@@ -56,11 +56,9 @@ First, create a [Seurat](https://satijalab.org/seurat/articles/pbmc3k_tutorial.h
 
 Second, download our integrated reference from [Zenodo]() and upload both our reference and your data to Google Drive.
 
-Third, open our colab workflow with the link below, and follow the included instructions.
+Third, open our colab workflow with the link below and follow the included instructions to produce an annotated Seurat object saved to your Google Drive.
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/gist/adtisch/d3f445882f32c9139a56e5772d0dd7f7/annotation-workbook.ipynb)
-
-The product of this workflow is a annotated Seurat object saved to your Google Drive as an RDS file.
 
 ## Questions and Issues
 If you have any questions or run into issues please leave your problem in the issues tab or contact the maintainers.
