@@ -56,7 +56,7 @@ First, create a [Seurat](https://satijalab.org/seurat/articles/pbmc3k_tutorial.h
 
 Second, download our integrated reference from [Zenodo]() and upload both our reference and your data to Google Drive.
 
-Third, open our colab workflow here, and follow the included instructions. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb)
+Third, open our colab workflow here, and follow the included instructions. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/gist/adtisch/d3f445882f32c9139a56e5772d0dd7f7/annotation-workbook.ipynb)
 
 
 
