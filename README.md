@@ -78,7 +78,7 @@ Third, open our colab workflow with the link below and follow the included instr
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/gist/adtisch/d3f445882f32c9139a56e5772d0dd7f7/annotation-workbook.ipynb)
 
 ## Questions and Issues
-If you have any questions or run into issues please leave your problem in the issues tab or contact the maintainers.
+If you have any questions or run into issues please leave your problem in the issues tab or contact us by email.
 
 Maintainers: Stephen Blough <bloughst@umich.edu> & Adam Tisch <adtisch@umich.edu>
 
@@ -94,7 +94,7 @@ Maintainers: Stephen Blough <bloughst@umich.edu> & Adam Tisch <adtisch@umich.edu
 - [Centers for Disease Control and Prevention. Chronic Kidney Disease in the United States, 2021. Atlanta, GA: US Department of Health and Human Services, Centers for Disease Control and Prevention; 2021.](https://www.cdc.gov/kidneydisease/publications-resources/ckd-national-facts.html)
 
 ### Project Inspiration:
-- [Abdelaal, T., Michielsen, L., Cats, D. et al. A comparison of automatic cell identification methods for single-cell RNA sequencing data. Genome Biol 20, 194 (2019).](https://doi.org/10.1186/s13059-019-1795-z)
+- [Abdelaal, T. et al. A comparison of automatic cell identification methods for single-cell RNA sequencing data. Genome Biol 20, 194 (2019).](https://doi.org/10.1186/s13059-019-1795-z)
 
 
 
