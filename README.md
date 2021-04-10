@@ -4,6 +4,7 @@
 
 According to the CDC, kidney disease is the ninth leading cause of death in the United States, affecting more than 1 in 7 adults. However, advancements in RNA sequencing technologies promise to provide answers, giving revolutionary insight into the complex mechanisms of kidney disease at cell-level resolution. This project seeks to increace the accessablity of data-driven medicine for the human kidney by compiling 5 expert-annotated sn and scRNAseq datasets of healthy, adult human kidney cells and harnessing them to automatically identify unknown query data.
 
+
 ### Training Data Composition
 
 To maximize the applicability of our model, we sought to include the most diverse a collection of samples we could obtain. We used cells from different single cell and single nucleus sequencing technologies, biopsy locations, ages, and sexes. A summary of our samples is shown in the table below.
@@ -19,35 +20,32 @@ To maximize the applicability of our model, we sought to include the most divers
 
 ### Workflow
 
-![image](https://user-images.githubusercontent.com/77076900/114284524-9128d200-9a1e-11eb-97a8-c4832318da66.png)
+The workflow of our project is visualized below. After obtaining our data, we removed poorly annotated cells by original author notes and our own SVM outlier detection protocol. Next, we merged and standardized the samples before removing batch effects using Seurat rPCA integration. Finally, we standardized the ontology across studies by plotting the correlation between original author annotations. This processed data was then used to evaluate the efficacy of various machine learning models by predicting cell types in a single study using the other four as a naive reference.
+
+![image](https://user-images.githubusercontent.com/77076900/114284866-e1a12f00-9a20-11eb-8ef9-3f864777b0c3.png)
 
 
-The performance of our model 
+### Performance
 
-
-
-
-Our reference map is visualized as an interactive cellxgene application, linked here.
-
-The code in this repository will both recreate our dataset and performance evaluation as well as implement our reference for user query data.
-
-Our performance testing workflow can be replicated with our Snakefile, which intakes the merged, unintegrated datasets from each of our 5 studies and automatically reproduces our workflow, results, and figures. 
-
-### Included Algorithms
-We tested 5 algorithms for cell type classification, each following a rejection model where cells with low classification probabilities are marked as unknown:
-- SVC
+Our performance testing included 5 different models, shown below, in a rejection scheme that marked uncertian cells as unknown. We used 0.6 as our threshold for rejection; however, this threshold may be tuned for more specific applications.
+- Support Vector Machine
 - RandomForest
-- MLP
+- Multi-Layer Perceptitron
 - KNeighbors
-- XGB
+- XGBoost
+
+All algorithms showed a strong performance, as visualized in the heatmap below. The best performer was XGBoost, which achieves an average median F1 score of 0.98 across the five datasets along with a average median rejection rate of known cells just slightly above 0. 
+
+![image](https://user-images.githubusercontent.com/77076900/114285109-94be5800-9a22-11eb-83eb-390235c1e9ff.png)
+
 
 ## To Reproduce Our Results
 
-Start by downloadng our dataset MergedObject.RDS from [zenodo](https://zenodo.org/record/4671060#.YG5Dby1h0YI).
+Start by downloadng our dataset MergedObject.RDS from [Zenodo](https://zenodo.org/record/4671060#.YG5Dby1h0YI).
 
 Place the dataset in a directory named data inside the root repository so that you can access it by data/ from the directory containing the Snakefile. (i.e. if root directory was named home, data should be on the path home/data/)
 
-Next, make sure that your system has [singularity](https://sylabs.io/guides/3.0/user-guide/installation.html) and [snakemake](https://snakemake.readthedocs.io/en/stable/getting_started/installation.html) installed, and load them into your environment. For our server, we type the commands: 
+Next, make sure that your system has [singularity](https://sylabs.io/guides/3.0/user-guide/installation.html) and [snakemake](https://snakemake.readthedocs.io/en/stable/getting_started/installation.html) installed, and load them into your environment. For our Linux server, we type the commands: 
 ```
 module load singularity 
 conda activate snakemake
@@ -58,7 +56,7 @@ Finally, type in this command to run the script:
 ```
 snakemake --use-singularity --cores <n cores>
 ```
-Here's what happening beneath the hood:
+Here's what happening under the hood:
 1. (File 1 IntegrateAll) Integration of all five datasets
   - Input: Merged RDS Seurat Object pre-QC cells
   - Output: Integrated h5ad object of pre-QC cells
