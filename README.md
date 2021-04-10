@@ -14,7 +14,7 @@ To maximize the applicability of our model, we sought to include the most divers
 
 ### Workflow
 
-The workflow of our project is visualized below. After obtaining our data, we removed poorly annotated cells by original author notes, UMAP visualization, and our own SVM outlier detection protocol. Next, we merged and standardized the samples before removing batch effects using Seurat rPCA integration. Finally, we standardized the ontology across studies by plotting the correlation between original author annotations. This processed data was then used to evaluate the efficacy of various machine learning models by predicting cell types in a single study using the other four as a naive reference.
+The workflow of our project is visualized below. After obtaining our data, we removed poorly annotated cells by original author notes, UMAP visualization, and SVM outlier detection. Next, we merged and standardized the samples before removing batch effects using Seurat rPCA integration. Finally, we standardized the ontology across studies by plotting the correlation between original author annotations. This processed data was then used to evaluate the efficacy of various machine learning models by predicting cell types in a single study using the other four as a naive reference.
 
 ![image](https://user-images.githubusercontent.com/77076900/114284866-e1a12f00-9a20-11eb-8ef9-3f864777b0c3.png)
 
