@@ -35,9 +35,9 @@ The workflow of our project is visualized below. After obtaining our data, we re
 
 Our performance testing included 5 different models, shown below, in a rejection scheme that marked uncertian cells as unknown. We used 0.6 as our threshold for rejection; however, this threshold may be tuned for more specific applications.
 - Support Vector Machine
-- RandomForest
+- Random Forest
 - Multi-Layer Perceptitron
-- KNeighbors
+- K Neighbors
 - XGBoost
 
 All algorithms showed a strong performance, as visualized in the heatmap below. The best performer was XGBoost, which achieves an average median F1 score of 0.98 across the five datasets along with a average median rejection rate of known cells just slightly above 0. 
