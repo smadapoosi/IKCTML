@@ -1,7 +1,14 @@
 # Identification of Cell Types in scRNA-seq Data Using Machine Learning Algorithms
 
+## Background
+According to the CDC, kidney disease is the ninth leading cause of death in the United States, affecting more than 1 in 7 adults. This project seeks to increace the accessability of data-driven precision kidney medicine by creating a reference map of more than 62,000 kidney cells from 45 donors in 5 published studies and using it to annotate user query data. 
+
+Often, single cell and single nucleus RNA data  
+
+
+
 ## Introduction
-According to the CDC, kidney disease is the ninth leading cause of death in the US, affects more than 1 in 7 US adults, and costs Medicare about $120 B per year. This project seeks to increace the accessability of data-driven precision kidney medicine by creating a reference map of more than 62,000 kidney cells from 45 donors in 5 published studies and using it to annotate user query data. 
+
 
 Our reference map is visualized as an interactive cellxgene application, linked here.
 
