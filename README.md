@@ -78,7 +78,7 @@ Third, open our colab workflow with the link below and follow the included instr
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/gist/adtisch/d3f445882f32c9139a56e5772d0dd7f7/annotation-workbook.ipynb)
 
 ## Questions and Issues
-If you have any questions or run into issues please leave your problem in the issues tab or contact us by email.
+If you have any questions or run into issues please leave them in the issues tab or contact us by email.
 
 Maintainers: Stephen Blough <bloughst@umich.edu> & Adam Tisch <adtisch@umich.edu>
 
