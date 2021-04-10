@@ -38,7 +38,7 @@ Our collected data is interactively visualized as a cellxgene object at this [li
 
 ## To Reproduce Our Results
 
-Start by downloadng our dataset MergedObject.RDS from [Zenodo](https://zenodo.org/record/4671060#.YG5Dby1h0YI).
+Start by downloading our dataset MergedObject.RDS from [Zenodo](https://zenodo.org/record/4671060#.YG5Dby1h0YI).
 
 Place the dataset in a directory named data inside the root repository so that you can access it by data/ from the directory containing the Snakefile. (i.e. if root directory was named home, data should be on the path home/data/)
 
@@ -54,17 +54,17 @@ Finally, type in this command to run the script:
 snakemake --use-singularity --cores <n cores>
 ```
 Here's what happening under the hood:
-1. (File 1 IntegrateAll) Integration of all five datasets
-  - Input: Merged RDS Seurat Object pre-QC cells
+1. (File 1: IntegrateAll.RDS) Integration of all five datasets
+  - Input: MergedObject.RDS Seurat Object pre-QC cells
   - Output: Integrated h5ad object of pre-QC cells
-2. (File 2 QualityControl) SVM quality control
-* Input: Integrated h5ad object of pre-QC cells from 1
-* Output: a CSV of binary cell designations from Quality control
-3. (File 3 IntegrateSome) Integration of 4 datasets and then with the last one separately
-* Input: Merged RDS Seurat Object pre-QC cells and CSV of binary cell designations from Quality control
-* Output: 5 h5ad objects, each of which is is first integrated with four of the datsets and then again with last one, which will simulate a query dataset
-4. (File 4 PerformanceTesting) SVM Performance testing
-* Input: 5 h5ad objects from 3
+2. (File 2: QualityControl.py) SVM quality control
+  - Input: Integrated h5ad object of pre-QC cells from 1
+  - Output: a CSV of binary cell designations from QualityControl.py
+3. (File 3 IntegrateSome.RDS) Integration of the first 4 datasets and then with the last one separately
+* Input: MergedObject.RDS Seurat Object pre-QC cells and CSV of binary cell designations from QualityControl.py
+* Output: 5 h5ad objects, each of which will simulate a user query
+4. (File 4 PerformanceTesting.py) SVM Performance testing
+* Input: 5 h5ad objects from IntegrateSome.RDS
 * Output: our figures and classification report (unknown percentages, f1 scores, and confusion matricies)
 
 ## To Query Our Reference
