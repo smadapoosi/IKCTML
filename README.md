@@ -5,6 +5,13 @@
 According to the CDC, kidney disease is the ninth leading cause of death in the United States, affecting more than 1 in 7 adults. However, advancements in RNA sequencing technologies promise to provide answers, giving revolutionary insight into the complex mechanisms of kidney disease at cell-level resolution. This project seeks to increace the accessablity of data-driven medicine for the human kidney by compiling 5 expert-annotated sn and scRNAseq datasets of healthy, adult human kidney cells and harnessing them to automatically identify unknown query data.
 
 
+### Pipeline Objective
+
+While nearly all other steps in the sc & snRNA-seq analysis pipeline are automated, the identification of cell types clusters is often performed manually. However, this system has limitations, as manual annotation is time consuming, requires expert-level knowlage of cell types, introduces subjectivity to otherwise data-driven analyses, creates non-standard labeling vocabularies, and has low reproducibility in the selection of biomarkers used to identify cell types. 
+
+By creating a pipeline to automatically identify kidney cells, we hope to demonstrate the effectiveness and accessability of an automated approach and address these concerns with manual annotation. We sought to emphasize reproducability and transparency in our methods, hoping to provide a model for automation of the annotation process and a pipeline to standardize and harness existing data for data-driven annotation of unknown cells. 
+
+
 ### Data Composition
 
 To maximize the applicability of our model, we sought to include the most diverse a collection of samples we could obtain. We used cells from different single cell and single nucleus sequencing technologies, biopsy locations, ages, and sexes. A summary of our samples is shown in the table below.
