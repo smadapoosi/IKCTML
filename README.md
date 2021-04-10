@@ -11,6 +11,8 @@ To maximize the applicability of our model, we sought to include the most divers
 
 ![image](https://user-images.githubusercontent.com/77076900/114285173-18784480-9a23-11eb-9800-8bec8db82e00.png)
 
+The code we used to replicate the original author analyses, as well as links to our data sources, is available in the Datset Replications folder of this repository.
+
 
 ### Workflow
 
