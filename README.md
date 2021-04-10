@@ -14,7 +14,7 @@ By creating a pipeline to automatically identify kidney cells, we hope to demons
 
 ### Data Composition
 
-To maximize the applicability of our model, we sought to include the most diverse a collection of samples we could obtain. We used cells from different single cell and single nucleus sequencing technologies, biopsy locations, ages, and sexes. A summary of our samples is shown in the table below.
+To maximize the applicability of our model, we included the most diverse a collection of samples we could obtain. We used cells from different single cell and single nucleus sequencing technologies, biopsy locations, ages, and sexes. A summary of our samples is shown in the table below.
 
 ![image](https://user-images.githubusercontent.com/77076900/114285173-18784480-9a23-11eb-9800-8bec8db82e00.png)
 
