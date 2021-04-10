@@ -53,7 +53,7 @@ Finally, type in this command to run the script:
 ```
 snakemake --use-singularity --cores <n cores>
 ```
-Here's what happening under the hood:
+Here's what's happening under the hood:
 1. (File 1: IntegrateAll.RDS) Integration of all five datasets
   - Input: MergedObject.RDS Seurat Object pre-QC cells
   - Output: Integrated h5ad object of pre-QC cells
