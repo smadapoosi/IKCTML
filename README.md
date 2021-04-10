@@ -5,17 +5,11 @@
 According to the CDC, kidney disease is the ninth leading cause of death in the United States, affecting more than 1 in 7 adults. However, advancements in RNA sequencing technologies promise to provide answers, giving revolutionary insight into the complex mechanisms of kidney disease at cell-level resolution. This project seeks to increace the accessablity of data-driven medicine for the human kidney by compiling 5 expert-annotated sn and scRNAseq datasets of healthy, adult human kidney cells and harnessing them to automatically identify unknown query data.
 
 
-### Training Data Composition
+### Data Composition
 
 To maximize the applicability of our model, we sought to include the most diverse a collection of samples we could obtain. We used cells from different single cell and single nucleus sequencing technologies, biopsy locations, ages, and sexes. A summary of our samples is shown in the table below.
 
-| Study | Number of Cells | Number of Donors | Number of Samples | Sampling Locations | Age | Sex | Technology |
-| ------|-----------------|------------------|-------------------|---------------------|-----|----|---------------------|
-| Lake et al. | 13,255 | 10 | 35 | 15 Cortex; 14 Medulla; 6 Both | 12 Samples < 50; 23 Samples > 50 | 10 M; 11 F| sn Drop-Seq |
- | Liao et al. | 16,145 | 2 | 2 | Unknown | 59, 65 | 1 M; 1 F | sc 10X |
- | Menon et al. | 22,264 | 22 | 24 | Unknown | 2 Samples < 50; 13 Samples > 50 | 7 M; 6 F | sc 10X |
- | Wu et al. | 4,432 | 1  | 4 | Unknown | 21 | M | sn InDrops |
- | Young et al.  | 6,179  | 5  | 17  | 14 Cortex; 1 Both; 2 Ureter | 49; 63; 67; 70; 72 | 3 M; 2 F | sc 10X |
+![image](https://user-images.githubusercontent.com/77076900/114285173-18784480-9a23-11eb-9800-8bec8db82e00.png)
 
 
 ### Workflow
@@ -38,6 +32,9 @@ All algorithms showed a strong performance, as visualized in the heatmap below. 
 
 ![image](https://user-images.githubusercontent.com/77076900/114285109-94be5800-9a22-11eb-83eb-390235c1e9ff.png)
 
+## Data Visualization
+
+Our collected data is interactively visualized as a cellxgene object at this [link](https://nephromappercellxgene.herokuapp.com/) (Note it may require a minute or two to load). This object allows for a detailed exploration of the genes expressed by our cells along their various metadata annotations including cell type, study, sex, age, technology, and original author annotation. 
 
 ## To Reproduce Our Results
 
@@ -72,8 +69,6 @@ Here's what happening under the hood:
 
 ## To Query Our Reference
 
-The best performing annotation protocol from our performance testing showed an average median F1 score 
-
 First, create a [Seurat](https://satijalab.org/seurat/articles/pbmc3k_tutorial.html) object for your data. 
 
 Second, download our integrated reference from [Zenodo]() and upload both our reference and your data to Google Drive.
@@ -87,12 +82,16 @@ If you have any questions or run into issues please leave your problem in the is
 
 Maintainers: Stephen Blough <bloughst@umich.edu> & Adam Tisch <adtisch@umich.edu>
 
-### Citations
-Our Merged Kidney Dataset used a combination of datasets and studies from:
-- Menon et al.
-- Lake et al.
-- Wu et al.
-- Liao et al.
-- Young et al.
+## Citations
+### Included Datasets:
+- [Lake, B.B. et al. A single-nucleus RNA-sequencing pipeline to decipher the molecular anatomy and pathophysiology of human kidneys. Nat Commun 10, 2832 (2019).](https://doi.org/10.1038/s41467-019-10861-2)
+- [Liao, J., Yu, Z., Chen, Y. et al. Single-cell RNA sequencing of human kidney. Sci Data 7, 4 (2020).](https://doi.org/10.1038/s41597-019-0351-8)
+- [Menon, R. et al. Single cell transcriptomics identifies focal segmental glomerulosclerosis remission endothelial biomarker. JCI Insight 5, e133267 (2020).](https://doi.org/10.1172/jci.insight.133267)
+- [Wu, H. et al. Single-cell transcriptomics of a human kidney allograft biopsy specimen defines a diverse inflammatory response. J Am Soc Nephrol 29: 2069–2080 (2018).](doi:10.1681/ASN.2018020125)
+- [Young, M. D. et al. Single-cell transcriptomes from human kidneys reveal the cellular identity of renal tumors. Science 361, 594–599 (2018).](https://doi.org/10.1126/science.aat1699)
+
+### CDC Statistics:
+[Centers for Disease Control and Prevention. Chronic Kidney Disease in the United States, 2021. Atlanta, GA: US Department of Health and Human Services, Centers for Disease Control and Prevention; 2021.](https://www.cdc.gov/kidneydisease/publications-resources/ckd-national-facts.html)
+
 
 
