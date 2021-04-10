@@ -7,7 +7,7 @@ According to the CDC, kidney disease is the ninth leading cause of death in the 
 
 ### Pipeline Objective
 
-While nearly all other steps in the sc & snRNA-seq analysis pipeline are automated, as shown in the flowchart below, the identification of cell types clusters is often performed manually. However, this system has limitations, as manual annotation is time consuming, requires expert-level knowlage of cell types, introduces subjectivity to otherwise data-driven analyses, creates non-standard labeling vocabularies, and has low reproducibility in the selection of biomarkers used to identify cell types. 
+While nearly all other steps in the sc & snRNA-seq analysis pipeline are automated, as visualized by the flowchart below, the identification of cell types clusters is often performed manually. However, this system has limitations, as manual annotation is time consuming, requires expert-level knowlage of cell types, introduces subjectivity to otherwise data-driven analyses, creates non-standard labeling vocabularies, and has low reproducibility in the selection of biomarkers used to identify cell types. 
 
 
 ![image](https://user-images.githubusercontent.com/77076900/114286285-5b3e1a80-9a2b-11eb-85ac-3b81d69a71e9.png)
