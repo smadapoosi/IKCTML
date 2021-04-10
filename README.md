@@ -34,7 +34,7 @@ All algorithms showed a strong performance, as visualized in the heatmap below. 
 
 ## Data Visualization
 
-Our collected data is interactively visualized as a cellxgene object at this [link](https://nephromappercellxgene.herokuapp.com/) (Note it may require a minute or two to load). This object allows for a detailed exploration of the genes expressed by our cells along their various metadata annotations including cell type, study, sex, age, technology, and original author annotation. 
+Our collected data is interactively visualized as a cellxgene object at this [link](https://nephromappercellxgene.herokuapp.com/) (Note it may require a minute or two to load). This object allows for a detailed exploration of the genes expressed by our cells by their various metadata annotations, including cell type, study, sex, age, technology, and original author annotation. 
 
 ## To Reproduce Our Results
 
