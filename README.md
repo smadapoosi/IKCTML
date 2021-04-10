@@ -9,7 +9,7 @@ According to the CDC, kidney disease is the ninth leading cause of death in the 
 
 While nearly all other steps in the sc & snRNA-seq analysis pipeline are automated, the identification of cell types clusters is often performed manually. However, this system has limitations, as manual annotation is time consuming, requires expert-level knowlage of cell types, introduces subjectivity to otherwise data-driven analyses, creates non-standard labeling vocabularies, and has low reproducibility in the selection of biomarkers used to identify cell types. 
 
-By creating a pipeline to automatically identify kidney cells, we hope to demonstrate the effectiveness and accessability of an automated approach and address these concerns with manual annotation. We sought to emphasize reproducability and transparency in our methods, hoping to provide a model for automation of the annotation process and a pipeline to standardize and harness existing data for data-driven annotation of unknown cells. 
+By creating a pipeline to automatically identify kidney cells, we hope to demonstrate the effectiveness and accessability of an automated approach and thereby address these concerns with manual annotation. We sought to emphasize reproducability and transparency in our methods, hoping to provide a model for automation of the annotation process and a pipeline to standardize and harness existing data for data-driven annotation of unknown cells. 
 
 
 ### Data Composition
