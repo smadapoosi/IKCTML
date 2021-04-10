@@ -1,13 +1,30 @@
 # Identification of Cell Types in scRNA-seq Data Using Machine Learning Algorithms
 
-## Background
-According to the CDC, kidney disease is the ninth leading cause of death in the United States, affecting more than 1 in 7 adults. This project seeks to increace the accessability of data-driven precision kidney medicine by creating a reference map of more than 62,000 kidney cells from 45 donors in 5 published studies and using it to annotate user query data. 
-
-Often, single cell and single nucleus RNA data  
-
-
-
 ## Introduction
+
+According to the CDC, kidney disease is the ninth leading cause of death in the United States, affecting more than 1 in 7 adults. However, advancements in RNA sequencing technologies promise to provide answers, giving revolutionary insight into the complex mechanisms of kidney disease at cell-level resolution. This project seeks to increace the accessablity of data-driven medicine for the human kidney by compiling 5 expert-annotated sn and scRNAseq datasets of healthy, adult human kidney cells and harnessing them to automatically identify unknown query data.
+
+### Training Data Composition
+
+To maximize the applicability of our model, we sought to include the most diverse a collection of samples we could obtain. We used cells from different single cell and single nucleus sequencing technologies, biopsy locations, ages, and sexes. A summary of our samples is shown in the table below.
+
+| Study | Number of Cells | Number of Donors | Number of Samples | Sampling Locations | Age | Sex | Technology |
+| ------|-----------------|------------------|-------------------|---------------------|-----|----|---------------------|
+| Lake et al. | 13,255 | 10 | 35 | 15 Cortex; 14 Medulla; 6 Both | 12 Samples < 50; 23 Samples > 50 | 10 M; 11 F| sn Drop-Seq |
+ | Liao et al. | 16,145 | 2 | 2 | Unknown | 59, 65 | 1 M; 1 F | sc 10X |
+ | Menon et al. | 22,264 | 22 | 24 | Unknown | 2 Samples < 50; 13 Samples > 50 | 7 M; 6 F | sc 10X |
+ | Wu et al. | 4,432 | 1  | 4 | Unknown | 21 | M | sn InDrops |
+ | Young et al.  | 6,179  | 5  | 17  | 14 Cortex; 1 Both; 2 Ureter | 49; 63; 67; 70; 72 | 3 M; 2 F | sc 10X |
+
+
+### Workflow
+
+![image](https://user-images.githubusercontent.com/77076900/114284524-9128d200-9a1e-11eb-97a8-c4832318da66.png)
+
+
+The performance of our model 
+
+
 
 
 Our reference map is visualized as an interactive cellxgene application, linked here.
