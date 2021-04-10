@@ -87,11 +87,14 @@ Maintainers: Stephen Blough <bloughst@umich.edu> & Adam Tisch <adtisch@umich.edu
 - [Lake, B.B. et al. A single-nucleus RNA-sequencing pipeline to decipher the molecular anatomy and pathophysiology of human kidneys. Nat Commun 10, 2832 (2019).](https://doi.org/10.1038/s41467-019-10861-2)
 - [Liao, J., Yu, Z., Chen, Y. et al. Single-cell RNA sequencing of human kidney. Sci Data 7, 4 (2020).](https://doi.org/10.1038/s41597-019-0351-8)
 - [Menon, R. et al. Single cell transcriptomics identifies focal segmental glomerulosclerosis remission endothelial biomarker. JCI Insight 5, e133267 (2020).](https://doi.org/10.1172/jci.insight.133267)
-- [Wu, H. et al. Single-cell transcriptomics of a human kidney allograft biopsy specimen defines a diverse inflammatory response. J Am Soc Nephrol 29: 2069–2080 (2018).](doi:10.1681/ASN.2018020125)
+- [Wu, H. et al. Single-cell transcriptomics of a human kidney allograft biopsy specimen defines a diverse inflammatory response. J Am Soc Nephrol 29: 2069–2080 (2018).](https://doi.org/10.1681/asn.2018020125)
 - [Young, M. D. et al. Single-cell transcriptomes from human kidneys reveal the cellular identity of renal tumors. Science 361, 594–599 (2018).](https://doi.org/10.1126/science.aat1699)
 
 ### CDC Statistics:
-[Centers for Disease Control and Prevention. Chronic Kidney Disease in the United States, 2021. Atlanta, GA: US Department of Health and Human Services, Centers for Disease Control and Prevention; 2021.](https://www.cdc.gov/kidneydisease/publications-resources/ckd-national-facts.html)
+- [Centers for Disease Control and Prevention. Chronic Kidney Disease in the United States, 2021. Atlanta, GA: US Department of Health and Human Services, Centers for Disease Control and Prevention; 2021.](https://www.cdc.gov/kidneydisease/publications-resources/ckd-national-facts.html)
+
+### Project Inspiration:
+- [Abdelaal, T., Michielsen, L., Cats, D. et al. A comparison of automatic cell identification methods for single-cell RNA sequencing data. Genome Biol 20, 194 (2019).](https://doi.org/10.1186/s13059-019-1795-z)
 
 
 
