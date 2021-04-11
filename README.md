@@ -48,7 +48,7 @@ All algorithms showed a strong performance, as visualized in the heatmap below. 
 
 Our collected data is interactively visualized as a cellxgene object hosted by Heroku at this [link](https://nephromap.herokuapp.com/) (Note it may require a minute or two to load). This object allows for a detailed exploration of the genes expressed by our cells by their various metadata annotations, including cell type, study, sex, age, technology, and original author annotation.
 
-![image](https://user-images.githubusercontent.com/77076900/114322981-1bda0180-9af1-11eb-8136-c550e009eed5.png)
+![image](https://user-images.githubusercontent.com/77076900/114323022-52b01780-9af1-11eb-8f4f-0aaa91ea028e.png)
 
 ## To Reproduce Our Results
 
