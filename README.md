@@ -77,7 +77,7 @@ Here's what's happening under the hood:
 3. (File 3: IntegrateSome.R) Integration of the first 4 datasets and then with the last one separately
 * Input: MergedObject.RDS Seurat Object pre-QC cells and CSV of binary cell designations from QualityControl.py
 * Output: 5 h5ad objects, each of which will simulate a user query
-4. (File 4: PerformanceTesting.py) SVM Performance testing
+4. (File 4: PerformanceTesting.py) Machine Learning Performance testing
 * Input: 5 h5ad objects from IntegrateSome.RDS
 * Output: our figures and classification report (unknown percentages, f1 scores, and confusion matricies)
 
