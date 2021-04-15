@@ -68,13 +68,13 @@ Finally, type in this command to run the script:
 snakemake --use-singularity --cores <n cores>
 ```
 Here's what's happening under the hood:
-1. (File 1: IntegrateAll.RDS) Integration of all five datasets
+1. (File 1: IntegrateAll.R) Integration of all five datasets
   - Input: MergedObject.RDS Seurat Object pre-QC cells
   - Output: Integrated h5ad object of pre-QC cells
 2. (File 2: QualityControl.py) SVM quality control
   - Input: Integrated h5ad object of pre-QC cells from 1
   - Output: a CSV of binary cell designations from QualityControl.py
-3. (File 3: IntegrateSome.RDS) Integration of the first 4 datasets and then with the last one separately
+3. (File 3: IntegrateSome.R) Integration of the first 4 datasets and then with the last one separately
 * Input: MergedObject.RDS Seurat Object pre-QC cells and CSV of binary cell designations from QualityControl.py
 * Output: 5 h5ad objects, each of which will simulate a user query
 4. (File 4: PerformanceTesting.py) SVM Performance testing
