@@ -52,7 +52,7 @@ Our collected data is interactively visualized as a cellxgene object hosted by H
 
 ## To Reproduce Our Results
 
-Start by downloading our dataset, MergedObject.RDS, from [Zenodo](https://zenodo.org/record/4671060#.YG5Dby1h0YI).
+Start by downloading our dataset, MergedObject.RDS, from [Zenodo](https://zenodo.org/record/4701852#.YH3zDi1h0YI).
 
 Place the dataset in a directory named data inside the root repository so that you can access it by data/ from the directory containing the Snakefile. (i.e. if root directory was named home, data should be on the path home/data/)
 
@@ -85,7 +85,7 @@ Here's what's happening under the hood:
 
 First, create a [Seurat](https://satijalab.org/seurat/articles/pbmc3k_tutorial.html) object for your data. 
 
-Second, download our integrated reference from [Zenodo]() and upload both our reference and your data to Google Drive.
+Second, download our integrated reference from [Zenodo](https://zenodo.org/record/4701852#.YH3zDi1h0YI) and upload both our reference and your data to Google Drive.
 
 Third, open our colab workflow with the link below and follow the included instructions to produce an annotated Seurat object saved to your Google Drive.
 
