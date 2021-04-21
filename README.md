@@ -44,6 +44,7 @@ All algorithms showed a strong performance, as visualized in the heatmap below. 
 
 ![image](https://user-images.githubusercontent.com/77076900/114285109-94be5800-9a22-11eb-83eb-390235c1e9ff.png)
 
+
 ## Data Visualization
 
 Our collected data is interactively visualized as a cellxgene object hosted by Heroku at this [link](https://nephromap.herokuapp.com/) (Note it may require a minute or two to load). This object allows for a detailed exploration of the genes expressed by our cells by their various metadata annotations, including cell type, study, sex, age, technology, and original author annotation.
@@ -89,7 +90,7 @@ Second, download our integrated reference from [Zenodo](https://zenodo.org/recor
 
 Third, open our colab workflow with the link below and follow the included instructions to produce an annotated Seurat object saved to your Google Drive.
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/gist/adtisch/d3f445882f32c9139a56e5772d0dd7f7/annotation-workbook.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/gist/adtisch/ff94f47c2a809f330e31cc70e32f4a9b/annotation-workflow.ipynb)
 
 ## Questions and Issues
 If you have any questions or run into issues please leave them in the issues tab or contact us by email.
