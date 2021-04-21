@@ -84,7 +84,7 @@ Here's what's happening under the hood:
 
 ## To Query Our Reference
 
-First, create a [Seurat](https://satijalab.org/seurat/articles/pbmc3k_tutorial.html) object for your data. 
+First, create a [Seurat](https://satijalab.org/seurat/articles/pbmc3k_tutorial.html) object for your data, and upload this object to a Google Drive. 
 
 Second, open our colab workflow with the link below and follow the included instructions to produce an annotated Seurat object saved to your Google Drive.
 
