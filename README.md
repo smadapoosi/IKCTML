@@ -86,9 +86,7 @@ Here's what's happening under the hood:
 
 First, create a [Seurat](https://satijalab.org/seurat/articles/pbmc3k_tutorial.html) object for your data. 
 
-Second, download our integrated reference from [Zenodo](https://zenodo.org/record/4701852#.YH3zDi1h0YI) and upload both our reference and your data to Google Drive.
-
-Third, open our colab workflow with the link below and follow the included instructions to produce an annotated Seurat object saved to your Google Drive.
+Second, open our colab workflow with the link below and follow the included instructions to produce an annotated Seurat object saved to your Google Drive.
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/gist/adtisch/ff94f47c2a809f330e31cc70e32f4a9b/annotation-workflow.ipynb)
 
