@@ -76,10 +76,10 @@ Here's what's happening under the hood:
   - Input: Output from IntegrateAll.R
   - Output: a CSV of binary cell quality control designations
 3. (File 3: IntegrateSome.R) Train-test split
-* Input: ~62,000 pre-QC, pre-batch correctin cells and CSV of binary cell designations outputted by QualityControl.py
+* Input: Pre-batch correction object of ~62,000 pre-QC cells and CSV of binary cell qualtiy control designations designations produced by QualityControl.py
 * Output: Five objects of ~57,000 batch corrected, post-qc cells, marked with training and testing split
 4. (File 4: PerformanceTesting.py) Machine learning performance testing
-* Input: Five train-test split objects from IntegrateSome.R
+* Input: Five train-test split objects produced by IntegrateSome.R
 * Output: Figures and classification report (unknown percentages, f1 scores, and confusion matricies)
 
 ## To Query Our Reference
