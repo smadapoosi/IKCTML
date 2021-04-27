@@ -888,7 +888,7 @@ plt.figure(figsize=(20,15))
 sns.heatmap(ukdf1, annot=True, cmap = cmap, robust = True)
 ```
 
-    ## <AxesSubplot:>
+![](test_files/figure-gfm/figure 4_1")<!-- -->
 
 ``` r
 sessionInfo()
