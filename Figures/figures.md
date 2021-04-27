@@ -865,7 +865,7 @@ sns.set_theme(font_scale = 3)
 plt.figure(figsize=(20,15))
 ```
 
-    ## <Figure size 4000x3000 with 0 Axes>
+![image](https://user-images.githubusercontent.com/77076900/116281493-c7bd5700-a757-11eb-9ad9-1f7c13e7b956.png)
 
 ``` python
 sns.heatmap(tobemapped, annot = True, cmap=cmap, robust = True)
@@ -888,7 +888,7 @@ plt.figure(figsize=(20,15))
 sns.heatmap(ukdf1, annot=True, cmap = cmap, robust = True)
 ```
 
-![](test_files/figure-gfm/figure4_2.png")<!-- -->
+![image](https://user-images.githubusercontent.com/77076900/116281455-bc6a2b80-a757-11eb-9cf7-338be43049b3.png)
 
 ``` r
 sessionInfo()
