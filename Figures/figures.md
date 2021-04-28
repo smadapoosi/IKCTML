@@ -32,70 +32,6 @@ sobjm <- readRDS('MergedObject.RDS')
 library(Seurat)
 ```
 
-    ## Warning: package 'Seurat' was built under R version 4.0.4
-
-    ## Warning: replacing previous import 'spatstat.utils::RelevantNA' by
-    ## 'spatstat.sparse::RelevantNA' when loading 'spatstat.core'
-
-    ## Warning: replacing previous import 'spatstat.utils::grokIndexVector' by
-    ## 'spatstat.sparse::grokIndexVector' when loading 'spatstat.core'
-
-    ## Warning: replacing previous import 'spatstat.utils::fullIndexSequence' by
-    ## 'spatstat.sparse::fullIndexSequence' when loading 'spatstat.core'
-
-    ## Warning: replacing previous import 'spatstat.utils::positiveIndex' by
-    ## 'spatstat.sparse::positiveIndex' when loading 'spatstat.core'
-
-    ## Warning: replacing previous import 'spatstat.utils::replacementIndex' by
-    ## 'spatstat.sparse::replacementIndex' when loading 'spatstat.core'
-
-    ## Warning: replacing previous import 'spatstat.utils::RelevantEmpty' by
-    ## 'spatstat.sparse::RelevantEmpty' when loading 'spatstat.core'
-
-    ## Warning: replacing previous import 'spatstat.utils::isRelevantZero' by
-    ## 'spatstat.sparse::isRelevantZero' when loading 'spatstat.core'
-
-    ## Warning: replacing previous import 'spatstat.utils::logicalIndex' by
-    ## 'spatstat.sparse::logicalIndex' when loading 'spatstat.core'
-
-    ## Warning: replacing previous import 'spatstat.utils::RelevantZero' by
-    ## 'spatstat.sparse::RelevantZero' when loading 'spatstat.core'
-
-    ## Warning: replacing previous import 'spatstat.utils::strictIndexSequence' by
-    ## 'spatstat.sparse::strictIndexSequence' when loading 'spatstat.core'
-
-    ## Warning: replacing previous import 'spatstat.utils::RelevantNA' by
-    ## 'spatstat.sparse::RelevantNA' when loading 'spatstat.geom'
-
-    ## Warning: replacing previous import 'spatstat.utils::grokIndexVector' by
-    ## 'spatstat.sparse::grokIndexVector' when loading 'spatstat.geom'
-
-    ## Warning: replacing previous import 'spatstat.utils::fullIndexSequence' by
-    ## 'spatstat.sparse::fullIndexSequence' when loading 'spatstat.geom'
-
-    ## Warning: replacing previous import 'spatstat.utils::positiveIndex' by
-    ## 'spatstat.sparse::positiveIndex' when loading 'spatstat.geom'
-
-    ## Warning: replacing previous import 'spatstat.utils::replacementIndex' by
-    ## 'spatstat.sparse::replacementIndex' when loading 'spatstat.geom'
-
-    ## Warning: replacing previous import 'spatstat.utils::RelevantEmpty' by
-    ## 'spatstat.sparse::RelevantEmpty' when loading 'spatstat.geom'
-
-    ## Warning: replacing previous import 'spatstat.utils::isRelevantZero' by
-    ## 'spatstat.sparse::isRelevantZero' when loading 'spatstat.geom'
-
-    ## Warning: replacing previous import 'spatstat.utils::logicalIndex' by
-    ## 'spatstat.sparse::logicalIndex' when loading 'spatstat.geom'
-
-    ## Warning: replacing previous import 'spatstat.utils::RelevantZero' by
-    ## 'spatstat.sparse::RelevantZero' when loading 'spatstat.geom'
-
-    ## Warning: replacing previous import 'spatstat.utils::strictIndexSequence' by
-    ## 'spatstat.sparse::strictIndexSequence' when loading 'spatstat.geom'
-
-    ## Attaching SeuratObject
-
 ``` r
 sobjm <- FindVariableFeatures(sobjm)
 sobjm <- ScaleData(sobjm)
@@ -147,36 +83,13 @@ sobjm <- RunPCA(sobjm)
 sobjm <- RunUMAP(sobjm, dims = 1:30)
 ```
 
-    ## Warning: The default method for RunUMAP has changed from calling Python UMAP via reticulate to the R-native UWOT using the cosine metric
-    ## To use Python UMAP via reticulate, set umap.method to 'umap-learn' and metric to 'correlation'
-    ## This message will be shown once per session
-
-    ## 08:36:13 UMAP embedding parameters a = 0.9922 b = 1.112
-
-    ## 08:36:13 Read 62293 rows and found 30 numeric columns
-
-    ## 08:36:13 Using Annoy for neighbor search, n_neighbors = 30
-
-    ## 08:36:13 Building Annoy index with metric = cosine, n_trees = 50
-
-    ## 0%   10   20   30   40   50   60   70   80   90   100%
-
-    ## [----|----|----|----|----|----|----|----|----|----|
-
-    ## **************************************************|
-    ## 08:36:22 Writing NN index file to temp file C:\Users\adamt\AppData\Local\Temp\RtmpSIajFD\filea9b02683da5
-    ## 08:36:22 Searching Annoy index using 1 thread, search_k = 3000
-    ## 08:36:49 Annoy recall = 100%
-    ## 08:36:50 Commencing smooth kNN distance calibration using 1 thread
-    ## 08:36:54 Initializing from normalized Laplacian + noise
-    ## 08:37:07 Commencing optimization for 200 epochs, with 2776636 positive edges
-    ## 08:38:34 Optimization finished
-
 ### Figure 3a, part 1
 
 ``` r
 DimPlot(sobjm, group.by = 'Study')
 ```
+
+Please note any reproduced UMAP may have superficial differences due to uncontroled random seeding.
 
 ![Please note any reproduced UMAP may have superficial differences due to uncontroled random seeding.](test_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
@@ -544,107 +457,11 @@ anchors <- FindIntegrationAnchors(object.list = sobjmlist, anchor.features = fea
 
     ## Finding anchors
 
-    ##  Found 518 anchors
-
-    ## Finding neighborhoods
-
-    ## Finding anchors
-
-    ##  Found 1779 anchors
-
-    ## Finding neighborhoods
-
-    ## Finding anchors
-
-    ##  Found 2009 anchors
-
-    ## Finding neighborhoods
-
-    ## Finding anchors
-
-    ##  Found 1253 anchors
-
-    ## Finding neighborhoods
-
-    ## Finding anchors
-
-    ##  Found 733 anchors
-
-    ## Finding neighborhoods
-
-    ## Finding anchors
-
-    ##  Found 1913 anchors
-
-    ## Finding neighborhoods
-
-    ## Finding anchors
-
-    ##  Found 1221 anchors
-
-    ## Finding neighborhoods
-
-    ## Finding anchors
-
-    ##  Found 1094 anchors
-
-    ## Finding neighborhoods
-
-    ## Finding anchors
-
-    ##  Found 4642 anchors
-
-    ## Finding neighborhoods
-
-    ## Finding anchors
-
-    ##  Found 1710 anchors
-
 ``` r
 rm(sobjmlist)
 
 sobji <- IntegrateData(anchorset = anchors)
 ```
-
-    ## Merging dataset 5 into 3
-
-    ## Extracting anchors for merged samples
-
-    ## Finding integration vectors
-
-    ## Finding integration vector weights
-
-    ## Integrating data
-
-    ## Merging dataset 4 into 3 5
-
-    ## Extracting anchors for merged samples
-
-    ## Finding integration vectors
-
-    ## Finding integration vector weights
-
-    ## Integrating data
-
-    ## Merging dataset 1 into 3 5 4
-
-    ## Extracting anchors for merged samples
-
-    ## Finding integration vectors
-
-    ## Finding integration vector weights
-
-    ## Integrating data
-
-    ## Merging dataset 2 into 3 5 4 1
-
-    ## Extracting anchors for merged samples
-
-    ## Finding integration vectors
-
-    ## Finding integration vector weights
-
-    ## Integrating data
 
 ``` r
 rm(anchors)
@@ -697,27 +514,6 @@ sobji <- RunPCA(sobji)
 ``` r
 sobji <- RunUMAP(sobji, dims = 1:30)
 ```
-
-    ## 08:53:51 UMAP embedding parameters a = 0.9922 b = 1.112
-
-    ## 08:53:51 Read 62293 rows and found 30 numeric columns
-
-    ## 08:53:51 Using Annoy for neighbor search, n_neighbors = 30
-
-    ## 08:53:51 Building Annoy index with metric = cosine, n_trees = 50
-
-    ## 0%   10   20   30   40   50   60   70   80   90   100%
-
-    ## [----|----|----|----|----|----|----|----|----|----|
-
-    ## **************************************************|
-    ## 08:53:58 Writing NN index file to temp file C:\Users\adamt\AppData\Local\Temp\RtmpSIajFD\filea9b03d4e4723
-    ## 08:53:58 Searching Annoy index using 1 thread, search_k = 3000
-    ## 08:54:20 Annoy recall = 100%
-    ## 08:54:20 Commencing smooth kNN distance calibration using 1 thread
-    ## 08:54:24 Initializing from normalized Laplacian + noise
-    ## 08:54:28 Commencing optimization for 200 epochs, with 2799942 positive edges
-    ## 08:55:32 Optimization finished
 
 ``` r
 rename <- function(sobj){
@@ -781,6 +577,8 @@ sobji <- subset(sobji, subset = SVMQC == unique(sobji$SVMQC)[1])
 DimPlot(sobji, group.by = 'Study')
 ```
 
+Please note any reproduced UMAP may have superficial differences due to uncontroled random seeding.
+
 ![Please note any reproduced UMAP may have superficial differences due to uncontroled random seeding.](test_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
 
 ### Figure 3b
@@ -788,6 +586,8 @@ DimPlot(sobji, group.by = 'Study')
 ``` r
 DimPlot(sobji, group.by = 'Leveled_Names') + NoLegend()
 ```
+
+Please note any reproduced UMAP may have superficial differences due to uncontroled random seeding.
 
 ![Please note any reproduced UMAP may have superficial differences due to uncontroled random seeding.](test_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
 
