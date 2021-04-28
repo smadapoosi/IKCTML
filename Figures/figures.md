@@ -178,7 +178,7 @@ sobjm <- RunUMAP(sobjm, dims = 1:30)
 DimPlot(sobjm, group.by = 'Study')
 ```
 
-![](test_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+![Please note any reproduced UMAP may have superficial differences due to uncontroled random seeding.](test_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
 ``` r
 reticulate::use_python('/Users/adamt/anaconda3/envs/test/python.exe', required = TRUE)
@@ -781,7 +781,7 @@ sobji <- subset(sobji, subset = SVMQC == unique(sobji$SVMQC)[1])
 DimPlot(sobji, group.by = 'Study')
 ```
 
-![](test_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
+![Please note any reproduced UMAP may have superficial differences due to uncontroled random seeding.](test_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
 
 ### Figure 3b
 
@@ -789,7 +789,7 @@ DimPlot(sobji, group.by = 'Study')
 DimPlot(sobji, group.by = 'Leveled_Names') + NoLegend()
 ```
 
-![](test_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
+![Please note any reproduced UMAP may have superficial differences due to uncontroled random seeding.](test_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
 
 ``` r
 download.file('https://nephromapper-bucket.s3.us-east-2.amazonaws.com/mypickle.pickle', 'mypickle.pickle', method='curl')
