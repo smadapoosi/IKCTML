@@ -690,6 +690,110 @@ sns.heatmap(ukdf1, annot=True, cmap = cmap, robust = True)
 
 ![image](https://user-images.githubusercontent.com/77076900/116281455-bc6a2b80-a757-11eb-9cf7-338be43049b3.png)
 
+### Figure 5 part 1
+
+```{python}
+def medianf1maker(confusionmatrix):
+    data = confusionmatrix
+    
+    data0 = data / data.sum(0)
+    
+    data1 = data / data.sum(1)
+    
+    dataf1 = (2 * data0 * data1)/(data0 + data1)
+    dataf1 = dataf1.fillna(0)
+    
+    return(dataf1)
+    
+avglist=[]
+for i in range(5):
+    mat = resultslist[i][4]
+    avglist.append(medianf1maker(mat))
+
+columns = []
+lst = []
+for mat in avglist:
+    for col in mat.columns:
+        if not (col in lst):
+            columns.append(col)
+        lst.append(col)
+        
+rows = []
+lst2 = []
+for mat in avglist:
+    for row in mat.index:
+        if not (row in lst2):
+            rows.append(row)
+        lst2.append(row)
+
+template=pd.DataFrame(columns=columns, index = rows)
+
+for i in template.columns:
+  #  print(i)
+    for j in template.index:
+     #   print(j)
+        values = []
+        for mat in avglist:
+            if (i in mat.columns) and (j in mat.index):
+             #   print(mat.loc[j,i])
+                values.append(mat.loc[j,i])
+        
+        if len(values) > 0:
+            template.loc[j,i] = sum(values) / len(values)
+        #    print(len(values))
+            
+template = template.fillna(0)
+
+template = template.rename(columns={'Distal Convoluted and Connecting Tubules': 'Distal Convoluted & Connecting Tubules', 'Monocyte': 'Myloid', 'Parietal Epithelium, Late Proximal Tubule, Descending Thin Limb':'Parietal Epithelium, Late Proximal Tubule, & Descending Thin Limb', 'B, Plasma, Plasmacytoid':'B, Plasma, & Plasmacytoid','Natural Killer, T':'Natural Killer & T'}, index={'Distal Convoluted and Connecting Tubules': 'Distal Convoluted & Connecting Tubules', 'Monocyte':'Myloid', 'Parietal Epithelium, Late Proximal Tubule, Descending Thin Limb':'Parietal Epithelium, Late Proximal Tubule, & Descending Thin Limb', 'B, Plasma, Plasmacytoid':'B, Plasma, & Plasmacytoid','Natural Killer, T':'Natural Killer & T'})
+
+template = template.sort_index()
+template = template.sort_index(axis=1)
+
+cmap = sns.color_palette('coolwarm', as_cmap = True)
+sns.set(font='Arial', font_scale=0.85)
+plt.show(sns.heatmap(template, cmap=cmap, robust = True))
+
+```
+
+![image](https://user-images.githubusercontent.com/77076900/116594443-36351d00-a8f0-11eb-911d-9d66a0943b8a.png)
+
+### Figure 5 part 2
+
+```{python}
+r = [] 
+for m in range(5):
+    mat = resultslist[m][4]
+    r.append(mat['Unknown']/mat.sum(1))
+
+k = []
+for i in r:
+    for j in i.index:
+        if j not in k:
+            k.append(j)
+
+l = {}
+for i in k:
+    ilist = []
+    for j in r:
+        if i in j.index:
+              ilist.append(j[i])
+    l[i]= sum(ilist) / len(ilist)
+    
+l = pd.DataFrame.from_dict(l, orient='index')
+
+l = l.rename(index={'Distal Convoluted and Connecting Tubules': 'Distal Convoluted & Connecting Tubules', 'Monocyte':'Myloid', 'Parietal Epithelium, Late Proximal Tubule, Descending Thin Limb':'Parietal Epithelium, Late Proximal Tubule, & Descending Thin Limb', 'B, Plasma, Plasmacytoid':'B, Plasma, & Plasmacytoid','Natural Killer, T':'Natural Killer & T'})
+
+l = 100*l
+
+l=l.sort_index()
+
+cmap = sns.color_palette('coolwarm', as_cmap = True)
+sns.set(font='Arial', font_scale=0.85)
+plt.show(sns.heatmap(l, cmap=cmap, robust = True))
+```
+
+![image](https://user-images.githubusercontent.com/77076900/116594489-43eaa280-a8f0-11eb-9be0-4770d0a8c862.png)
+
 ``` r
 sessionInfo()
 ```
