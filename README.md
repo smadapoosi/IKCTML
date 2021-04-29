@@ -88,7 +88,7 @@ First, create a [Seurat](https://satijalab.org/seurat/articles/pbmc3k_tutorial.h
 
 Second, open our Colab workflow with the link below and follow the included instructions to produce an annotated Seurat object saved to your Google Drive.
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/gist/adtisch/2fdb963e4fbc5980f7e8f673889a8ef5/automated-annotation-workflow.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/gist/adtisch/03496b5a255597f71931bc2318a2d4fc/automated-annotation-workflow.ipynb)
 
 ## Questions and Issues
 If you have any questions or run into issues please leave them in the issues tab or contact us by email.
