@@ -53,7 +53,7 @@ Our collected data is interactively visualized as a cellxgene object hosted by H
 
 ## To Reproduce Our Results
 
-Start by downloading our dataset, MergedObject.RDS, from [Zenodo](https://zenodo.org/record/4726321#.YIoN-S1h0YI).
+Start by downloading our dataset, MergedObject.RDS, from [Zenodo](https://zenodo.org/record/4734253#.YJA_ry1h0YI).
 
 Place the dataset in a directory named data inside the root repository so that you can access it by data/ from the directory containing the Snakefile. (i.e. if root directory was named home, data should be on the path home/data/)
 
