@@ -45,12 +45,6 @@ All algorithms showed a strong performance, as visualized in the heatmap below. 
 ![image](https://user-images.githubusercontent.com/77076900/114285109-94be5800-9a22-11eb-83eb-390235c1e9ff.png)
 
 
-## Data Visualization
-
-Our collected data is interactively visualized as a cellxgene object hosted by Heroku at this [link](https://nephromap.herokuapp.com/) (Note it may require a minute or two to load). This object allows for a detailed exploration of around 4,000 highly variable genes expressed by our cells along their various metadata annotations, including cell type, study, sex, age, technology, and original author annotation.
-
-![image](https://user-images.githubusercontent.com/77076900/114323022-52b01780-9af1-11eb-8f4f-0aaa91ea028e.png)
-
 ## To Reproduce Our Results
 
 Start by downloading our dataset, MergedObject.RDS, from [Zenodo](https://zenodo.org/record/4734253#.YJA_ry1h0YI).
@@ -82,7 +76,7 @@ Here's what's happening under the hood:
 * Input: Five train-test split objects produced by IntegrateSome.R
 * Output: Figures and classification report (unknown percentages, f1 scores, and confusion matricies)
 
-## To Query Our Reference
+## To Query Our merged object
 
 First, create a [Seurat](https://satijalab.org/seurat/articles/pbmc3k_tutorial.html) object for your data, and upload this object to a Google Drive. 
 
@@ -93,7 +87,7 @@ Second, open our Colab workflow with the link below and follow the included inst
 ## Questions and Issues
 If you have any questions or run into issues please leave them in the issues tab or contact us by email.
 
-Maintainers: Stephen Blough <bloughst@umich.edu> & Adam Tisch <adtisch@umich.edu>
+Maintainers: Stephen Blough <bloughst@umich.edu> & Adam Tisch <adtisch@umich.edu> & Fadhl Alakwaa <alakwaaf@umich.edu>
 
 ## Citations
 ### Included Datasets:
