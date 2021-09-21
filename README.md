@@ -1,4 +1,4 @@
-# Identification of Cell Types in scRNA-seq Data Using Machine Learning Algorithms
+# Identification of Kidney Cell Types in scRNA-seq Data Using Machine Learning Algorithms
 
 ## Introduction
 
