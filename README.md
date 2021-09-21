@@ -2,12 +2,12 @@
 
 ## Introduction
 
-According to the CDC, kidney disease is the ninth leading cause of death in the United States, affecting more than 1 in 7 adults. However, advancements in RNA sequencing technologies promise to provide answers, giving revolutionary insight into the complex mechanisms of kidney disease at cell-level resolution. This project seeks to increace the accessablity of data-driven medicine for the human kidney by compiling 5 expert-annotated sn & scRNAseq datasets of healthy, adult human kidney cells and harnessing them to automatically identify unknown user query data.
+According to the CDC, kidney disease is the ninth leading cause of death in the United States, affecting more than 1 in 7 adults. However, advancements in RNA sequencing technologies promise to provide answers, giving revolutionary insight into the complex mechanisms of kidney disease at cell-level resolution. This project seeks to compare the accuracy of machine learning algorithms of predicting kidney cell types from sc/sn-RNA-seq data.
 
 
 ### Pipeline Objective
 
-While nearly all other steps in the sc & snRNA-seq analysis pipeline are automated, as visualized by the flowchart below, the identification of cell types clusters is often performed manually. However, this system has limitations, as manual annotation is time consuming, requires master-level knowlage of the landscape of the human transcriptome, introduces variable subjectivity to otherwise data-driven analyses, creates non-standard labeling vocabularies, and has low reproducibility in the selection of biomarkers used to identify cell types. 
+While nearly all other steps in the sc/snRNA-seq analysis pipeline are automated, as visualized by the flowchart below, the identification of cell types clusters is often performed manually. However, this system has limitations, as manual annotation is time consuming, requires master-level knowlage of the landscape of the human transcriptome, introduces variable subjectivity to otherwise data-driven analyses, creates non-standard labeling vocabularies, and has low reproducibility in the selection of biomarkers used to identify cell types. 
 
 
 ![image](https://user-images.githubusercontent.com/77076900/114286285-5b3e1a80-9a2b-11eb-85ac-3b81d69a71e9.png)
