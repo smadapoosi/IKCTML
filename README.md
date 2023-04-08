@@ -1,4 +1,4 @@
-# Identification of Kidney Cell Types in scRNA-seq Data Using Machine Learning Algorithms
+# Automatic Identification of Kidney Cell Types in scRNA-seq and snRNA-seq Data Using Machine Learning Algorithms
 
 ## Introduction
 
