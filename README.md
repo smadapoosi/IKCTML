@@ -42,7 +42,7 @@ Our performance testing included 5 different models, listed below, in a rejectio
 
 All algorithms showed a strong performance, as visualized in the heatmap below. The best performer was XGBoost, which achieves an average median F1 score of 0.98 across the five datasets along with a average median rejection rate of known cells just slightly above 0. This highest performing model is implemented in an accessible Colab workflow linked to this page.
 
-![image](https://user-images.githubusercontent.com/77076900/114285109-94be5800-9a22-11eb-83eb-390235c1e9ff.png)
+![image](https://github.com/smadapoosi/IKCTML/blob/f13d301a4fb9328afee31729d2780bf3955285cb/Figures/Fig_5a_Overall_Median_F1_Heatmap.pdf)
 
 
 ## To Reproduce Our Results
