@@ -47,7 +47,7 @@ All algorithms showed a strong performance, as visualized in the heatmap below. 
 
 ## To Reproduce Our Results
 
-Start by downloading our dataset, MergedObject.RDS, from [Zenodo](https://zenodo.org/record/4734253#.YJA_ry1h0YI).
+Start by downloading our dataset, MergedObject_Sid.RDS, from [Zenodo](https://zenodo.org/record/4734253#.YJA_ry1h0YI).
 
 Place the dataset in a directory named data inside the root repository so that you can access it by data/ from the directory containing the Snakefile. (i.e. if root directory was named home, data should be on the path home/data/)
 
@@ -75,6 +75,8 @@ Here's what's happening under the hood:
 4. (File 4: PerformanceTesting.py) Machine learning performance testing
 * Input: Five train-test split objects produced by IntegrateSome.R
 * Output: Figures and classification report (unknown percentages, f1 scores, and confusion matricies)
+
+The results published in our manuscript from start to finish, including dataset processing, integration, and machine learning, are can be reproduced using the jupyter notebook found here: (https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/file/d/1aOBCpdN2jiRb7popJZWrejFQ1gknv415/view?usp=sharing)
 
 ## To Query Our merged object
 
