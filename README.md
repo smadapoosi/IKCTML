@@ -45,7 +45,7 @@ All algorithms showed a strong performance, as visualized in the heatmap below. 
 ![image](https://github.com/smadapoosi/IKCTML/blob/29a90fb4eeeed79d620807a09f885d36410baa55/Figures/Fig_5a_Overall_Median_F1_Heatmap.png)
 ![image](https://github.com/smadapoosi/IKCTML/blob/7eeebb20756f5ef1bc01926d3da5cff26a04ebc5/Figures/Fig_5b_Overall_Percent_Unknown_Heatmap.png)
 
-## To Reproduce Our Results
+## Reproductibility
 
 Start by downloading our dataset, MergedObject_Sid.RDS, from [Zenodo](https://zenodo.org/record/4734253#.YJA_ry1h0YI).
 
@@ -78,7 +78,7 @@ Here's what's happening under the hood:
 
 The results published in our manuscript from start to finish, including dataset processing, integration, and machine learning, are can be reproduced using the jupyter notebook found here: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/file/d/1aOBCpdN2jiRb7popJZWrejFQ1gknv415/view?usp=sharing). An RData file, "Sid_Replication_032923.RData
 
-## To Query Our merged object
+## Querying for Merged Object
 
 First, create a [Seurat](https://satijalab.org/seurat/articles/pbmc3k_tutorial.html) object for your data, and upload this object to a Google Drive. 
 
@@ -104,6 +104,3 @@ Maintainers: Stephen Blough <bloughst@umich.edu> & Adam Tisch <adtisch@umich.edu
 
 ### Project Inspiration:
 - [Abdelaal, T. et al. A comparison of automatic cell identification methods for single-cell RNA sequencing data. Genome Biol 20, 194 (2019).](https://doi.org/10.1186/s13059-019-1795-z)
-
-
-
