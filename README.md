@@ -19,7 +19,7 @@ By creating a pipeline to automatically identify kidney cells, we hope to demons
 
 To maximize the applicability of our model, we included the most diverse a collection of samples we could obtain. We used cells from different single cell and single nucleus sequencing technologies, biopsy locations, ages, and sexes. A summary of our samples is shown in the table below.
 
-![image](https://user-images.githubusercontent.com/77076900/115768792-c4e9ed00-a378-11eb-8cdb-a8762f8dd857.png)
+![image](https://github.com/smadapoosi/IKCTML/blob/ff47db41983cc679efd76bdbed237b9ef385ceaf/Figures/Table_1.png)
 
 The code we used to replicate the original author analyses, as well as links to our data sources, is available in the Datset Replications folder of this repository.
 
