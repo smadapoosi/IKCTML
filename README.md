@@ -47,7 +47,7 @@ All algorithms showed a strong performance, as visualized in the heatmap below. 
 
 ## Reproductibility
 
-Start by downloading our dataset, MergedObject_Sid.RDS, from [Zenodo](https://zenodo.org/record/4734253#.YJA_ry1h0YI).
+Please start by downloading our dataset, MergedObject_Sid.RDS, from [Zenodo](https://zenodo.org/record/4734253#.YJA_ry1h0YI).
 
 Place the dataset in a directory named data inside the root repository so that you can access it by data/ from the directory containing the Snakefile. (i.e. if root directory was named home, data should be on the path home/data/)
 
