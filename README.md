@@ -76,7 +76,7 @@ Here's what's happening under the hood:
 * Input: Five train-test split objects produced by IntegrateSome.R
 * Output: Figures and classification report (unknown percentages, f1 scores, and confusion matricies)
 
-The results published in our manuscript from start to finish, including dataset processing, integration, and machine learning, are can be reproduced using the jupyter notebook found here: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/file/d/1aOBCpdN2jiRb7popJZWrejFQ1gknv415/view?usp=sharing). 
+The results published in our manuscript from start to finish, including dataset processing, integration, and machine learning, were replicated using the jupyter notebook found here: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/file/d/1aOBCpdN2jiRb7popJZWrejFQ1gknv415/view?usp=sharing). This jupyter notebook can be cleared and re-ran to replicate all of the steps of the analysis.
 
 An RData file, "Sid_Replication_032923.RData" with all of the R objects produced after one run of the script for evidence of reproducibility is available upon request.
 
