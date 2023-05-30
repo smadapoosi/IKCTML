@@ -36,7 +36,7 @@ def rename(sobj):
     
     celltypeslist = []
     bettername = []
-    celltypeslist.append(['Glomerular_endothelium_Young','EC-AEA_Menon','Endothelial Cells - AEA & DVR _Lake','GC-EC_Menon','Descending_vasa_recta_Young', 'Endothelial Cells - glomerular capillaries_Lake','EC-PT_Menon','Ascending_vasa_recta_Young','Endothelial Cells - AVR_Lake','EC_Wu','Endothelial Cells (unassigned)_Lake'])
+    celltypeslist.append(['Glomerular_endothelium_Young','EC-AEA_Menon','Endothelial Cells - AEA & DVR _Lake','GC-EC_Menon','Descending_vasa_recta_Young', 'Endothelial Cells - glomerular capillaries_Lake','EC-PT_Menon','Ascending_vasa_recta_Young','Endothelial Cells - AVR_Lake','EC_Wu'])
     bettername.append('Endothelium')
     celltypeslist.append(['cSMC/MC_Menon','Mesangial_Young','Vascular Smooth Muscle Cells and pericytes_Lake','Pericyte_Wu','Mesangial Cells_Lake'])
     bettername.append('Perivascular and Mesangium')
@@ -44,7 +44,7 @@ def rename(sobj):
     bettername.append('Fibrobasts')
     celltypeslist.append(['PODO_Menon','Glomerular_epithelium_and_podocytes_Young','Podocytes_Lake'])
     bettername.append('Podocytes')
-    celltypeslist.append(['Proximal Tubule Epithelial Cells (S2)_Lake','DTL_Menon','Unknown - Novel PT CFH+ Subpopulation (S2)_Lake','LOH (DL)_Wu','Decending thin Limb_Lake','PEC_Menon','Proximal Tubule Epithelial Cells (S3)_Lake', 'Glomerular parietal eptihelial_Liao'])
+    celltypeslist.append(['Proximal Tubule Epithelial Cells (S2)_Lake','DTL_Menon','Unknown - Novel PT CFH+ Subpopulation (S2)_Lake','LOH (DL)_Wu','Decending thin Limb_Lake','Proximal Tubule Epithelial Cells - Fibrinogen+ (S3)_Lake','PEC_Menon','Proximal Tubule Epithelial Cells (S3)_Lake', 'Glomerular parietal eptihelial_Liao', 'PT_Wu'])
     bettername.append('Parietal Epithelium, Late Proximal Tubule, Descending Thin Limb')
     celltypeslist.append(['Mono1_Wu','MYL-2_Menon','Immune Cells - Macrophages_Lake','Monocytes_Liao','MNP_Young','MYL-1_Menon','Mono2_Wu','B Cells_Wu'])
     bettername.append('Monocyte')
@@ -66,7 +66,7 @@ def rename(sobj):
     bettername.append('Mast')
     celltypeslist.append(['Neutrophil_Young'])
     bettername.append('Neutrophil')
-    celltypeslist.append(['Proximal_tubule_convoluted_and_straight_Young','Proximal Tubule Epithelial Cells (S1/S2)_Lake','PT_Wu','Proximal_tubule_convoluted_tubular_Young','PT_Menon','Proximal convoluted tubule_Liao','Proximal tubule_Liao','Proximal straight tubule_Liao','Proximal Tubule Epithelial Cells - Fibrinogen+ (S3)_Lake'])
+    celltypeslist.append(['Proximal_tubule_convoluted_and_straight_Young','Proximal Tubule Epithelial Cells (S1/S2)_Lake','Proximal_tubule_convoluted_tubular_Young','PT_Menon','Proximal convoluted tubule_Liao','Proximal tubule_Liao','Proximal straight tubule_Liao'])
     bettername.append('Proximal Tubule')
     
     sobj.obs['Leveled_Names'] = sobj.obs['Leveled_Names'].astype(str)
@@ -143,8 +143,18 @@ for i in range(5):
     resultslist[i].append(run(anndata, p))
 
 
-# In[6]:
-
+if not os.path.exists('scores'):
+    os.mkdir('scores')
+if not os.path.exists('confusion/RF'):
+    os.mkdir('confusion/RF')
+if not os.path.exists('confusion/SVC'):
+    os.mkdir('confusion/SVC')
+if not os.path.exists('confusion/KN'):
+    os.mkdir('confusion/KN')
+if not os.path.exists('confusion/XGB'):
+    os.mkdir('confusion/XGB')
+if not os.path.exists('confusion/MLP'):
+    os.mkdir('confusion/MLP')
 
 def medianf1(confusionmatrix):
     data = confusionmatrix
@@ -191,7 +201,7 @@ tobemapped = pd.DataFrame(resultslist1)
 
 def formatting(df):
     df.columns = ['Lake','Liao','Menon','Wu','Young']
-    df.index = ['SVC','RandomForest','MLP','KNeighbor','XGB']
+    df.index = ['SVC','RF','MLP','KN','XGB']
     return(df)
 
 
@@ -239,12 +249,6 @@ ukdf.to_csv('confusion/ukdf.csv')
 # In[17]:
 
 
-for i in range(5):
-    anndata = sc.read(argv[i+1])
-    anndata = rename(anndata)
-    print(anndata.obs['Study'])
-
-
 # In[47]:
 
 
@@ -252,8 +256,9 @@ ukdf1 = ukdf * 100
 cmap = sns.color_palette('coolwarm_r', as_cmap = True)
 sns.set_theme(font_scale = 3)
 plt.figure(figsize=(20,15))
-sns.heatmap(ukdf1, annot=True, cmap = cmap, robust = True)
-plt.savefig("confusion/Percent_Unknown_heatmap.pdf")
+percentunknownheatmap = sns.heatmap(ukdf1, annot=True, cmap = cmap, robust = True)
+percentunknownheatmap = percentunknownheatmap.get_figure()
+percentunknownheatmap.savefig("confusion/Percent_Unknown_heatmap.pdf")
 
 # In[45]:
 
@@ -261,14 +266,98 @@ plt.savefig("confusion/Percent_Unknown_heatmap.pdf")
 cmap = sns.color_palette('coolwarm', as_cmap = True)
 sns.set_theme(font_scale = 3)
 plt.figure(figsize=(20,15))
-sns.heatmap(tobemapped, annot = True, cmap=cmap, robust = True)
-plt.savefig("scores/Median_F1_heatmap.pdf")
+medianf1heatmap = sns.heatmap(tobemapped, annot = True, cmap=cmap, robust = True)
+medianf1heatmap = medianf1heatmap.get_figure()
+medianf1heatmap.savefig("scores/Median_F1_heatmap.pdf")
 
 # In[21]:
 
 datasetlist = ['Lake','Liao','Menon','Wu','Young']
-algorithmlist = ['SVC','RandomForest','MLP','KNeighbor','XGB']
-for i in range(len(resultslist)):
-    for j in range(len(resultslist[i])):
-        resultslist[i][j].to_csv('confusion/{}/{}_{}_confusion.csv'.format(algorithmlist[j], datasetlist[i], algorithmlist[j]))
+algorithmlist = ['SVC','RF','MLP','KN','XGB']
+
+
+def medianf1maker(confusionmatrix):
+    data = confusionmatrix
+    
+    data0 = data / data.sum(0)
+    
+    data1 = data / data.sum(1)
+    
+    dataf1 = (2 * data0 * data1)/(data0 + data1)
+    dataf1 = dataf1.fillna(0)
+    
+    return(dataf1)
+    
+avglist=[]
+for i in range(5):
+    mat = resultslist[i][4]
+    avglist.append(medianf1maker(mat))
+
+columns = []
+lst = []
+for mat in avglist:
+    for col in mat.columns:
+        if not (col in lst):
+            columns.append(col)
+        lst.append(col)
+        
+rows = []
+lst2 = []
+for mat in avglist:
+    for row in mat.index:
+        if not (row in lst2):
+            rows.append(row)
+        lst2.append(row)
+
+template=pd.DataFrame(columns=columns, index = rows)
+
+for i in template.columns:
+  #  print(i)
+    for j in template.index:
+     #   print(j)
+        values = []
+        for mat in avglist:
+            if (i in mat.columns) and (j in mat.index):
+             #   print(mat.loc[j,i])
+                values.append(mat.loc[j,i])
+        
+        if len(values) > 0:
+            template.loc[j,i] = sum(values) / len(values)
+        #    print(len(values))
+
+            
+template = template.fillna(0)
+template = template.sort_index()
+template = template.sort_index(axis=1)
+cmap = sns.color_palette('coolwarm', as_cmap = True)
+sns.set(font='Arial', font_scale=0.85)
+celltypef1heatmap = sns.heatmap(template, cmap=cmap, robust = True)
+celltypef1heatmap = celltypef1heatmap.get_figure()
+celltypef1heatmap.savefig("scores/CellType_F1_heatmap.pdf")
+r = [] 
+for m in range(5):
+    mat = resultslist[m][4]
+    r.append(mat['Unknown']/mat.sum(1))
+k = []
+for i in r:
+    for j in i.index:
+        if j not in k:
+            k.append(j)
+l = {}
+for i in k:
+    ilist = []
+    for j in r:
+        if i in j.index:
+              ilist.append(j[i])
+    l[i]= sum(ilist) / len(ilist)
+    
+l = pd.DataFrame.from_dict(l, orient='index')
+l = 100*l
+l=l.sort_index()
+cmap = sns.color_palette('coolwarm', as_cmap = True)
+sns.set(font='Arial', font_scale=0.85)
+ukbct = sns.heatmap(l, cmap=cmap, robust = True)
+ukbct = ukbct.get_figure()
+ukbct.savefig("scores/UnknownByCellType_F1_heatmap2.pdf")
+
 

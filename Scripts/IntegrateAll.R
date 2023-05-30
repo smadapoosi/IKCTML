@@ -30,7 +30,8 @@ sobji <- ScaleData(sobji)
 
 sobji <- RunPCA(sobji)
 
-reticulate::use_python('/opt/venv/bin/python3', required = TRUE)
+#reticulate::use_python('/opt/venv/bin/python3', required = TRUE)
+# ^ This line was pointing to a nonexistant python... I think -- Adam 6/25/22 17:28
 
 sceasy::convertFormat(sobji, from = 'seurat', to = 'anndata', outFile = 'data/integratedobject.h5ad')
 
