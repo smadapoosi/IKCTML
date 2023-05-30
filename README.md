@@ -78,7 +78,7 @@ Here's what's happening under the hood:
 
 The results published in our manuscript from start to finish, including dataset processing, integration, and machine learning, were replicated using the jupyter notebook found here: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/file/d/1aOBCpdN2jiRb7popJZWrejFQ1gknv415/view?usp=sharing). This jupyter notebook can be cleared and re-ran to replicate all of the steps of the analysis.
 
-An RData file, "Sid_Replication_032923.RData" with all of the R objects produced after one run of the script for evidence of reproducibility is available upon request.
+An RData file, "Sid_Replication_032923.RData" with all of the R objects produced after one run of the script for evidence of reproducibility is available upon request. This dataset can be loaded into the "Sid_Replication_05_18_23.ipynb" jupyter notebook found in IKCTML/Figures/Figures.md to re-generate the figures in our manuscript.
 
 ## Querying for Merged Object
 
@@ -91,7 +91,7 @@ Second, open our Colab workflow with the link below and follow the included inst
 ## Questions and Issues
 If you have any questions or run into issues please leave them in the issues tab or contact us by email.
 
-Maintainers: Stephen Blough <bloughst@umich.edu> & Adam Tisch <adtisch@umich.edu> & Fadhl Alakwaa <alakwaaf@umich.edu>
+Maintainers: Siddharth Madapoosi <madapoos@umich.edu>, Stephen Blough <bloughst@umich.edu>, Adam Tisch <adtisch@umich.edu>, & Fadhl Alakwaa <alakwaaf@umich.edu>
 
 ## Citations
 ### Included Datasets:
