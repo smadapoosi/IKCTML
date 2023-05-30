@@ -74,7 +74,7 @@ Here's what's happening under the hood:
 * Output: Five objects of ~57,000 batch corrected, post-qc cells, marked with training and testing split
 4. (File 4: PerformanceTesting.py) Machine learning performance testing
 * Input: Five train-test split objects produced by IntegrateSome.R
-* Output: Figures and classification report (unknown percentages, f1 scores, and confusion matricies)
+* Output: Figures and classification report (unknown percentages, F2 scores, and confusion matricies)
 
 The results published in our manuscript from start to finish, including dataset processing, integration, and machine learning, were replicated using the jupyter notebook found here: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/file/d/1aOBCpdN2jiRb7popJZWrejFQ1gknv415/view?usp=sharing). This jupyter notebook can be cleared and re-ran to replicate all of the steps of the analysis.
 
