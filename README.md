@@ -82,9 +82,7 @@ An RData file, "Sid_Replication_032923.RData" with all of the R objects produced
 
 ## Running XGBoost to Annotate Your Own Data
 
-First, create a [Seurat](https://satijalab.org/seurat/articles/pbmc3k_tutorial.html) object for your data, and upload this object to a Google Drive. 
-
-Second, open our Colab workflow with the link below and follow the included instructions to produce an annotated Seurat object saved to your Google Drive.
+If you would like to use XGBoost to annotate your own data, start by creating a [Seurat](https://satijalab.org/seurat/articles/pbmc3k_tutorial.html) object for your data, and upload this object to a Google Drive. Next, please open our Colab workflow with the link below and follow the included instructions. This will produce an annotated dataset that can be saved to your Google Drive.
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/file/d/1a0tSwn6dWsME9myqjWAQVPfMLavDoHOZ/view?usp=sharing)
 
