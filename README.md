@@ -2,7 +2,7 @@
 
 ## Introduction
 
-According to the CDC, kidney disease is the ninth leading cause of death in the United States, affecting more than 1 in 7 adults. However, advancements in RNA sequencing technologies promise to provide answers, giving revolutionary insight into the complex mechanisms of kidney disease at cell-level resolution. This project seeks to compare the accuracy of machine learning algorithms of predicting kidney cell types from sc/sn-RNA-seq data.
+Kidney disease is the ninth leading cause of death in the United States, affecting more than 1 in 7 adults according to the CDC. However, advancements in RNA sequencing technologies promise to provide answers, giving revolutionary insight into the complex mechanisms of kidney disease at cell-level resolution. This project seeks to compare the accuracy of machine learning algorithms wuith respect to predicting kidney cell types from sc/sn-RNA-seq data.
 
 
 ### Pipeline Objective
@@ -78,7 +78,7 @@ Here's what's happening under the hood:
 
 The results published in our manuscript from start to finish, including dataset processing, integration, and machine learning, were replicated using the jupyter notebook found here: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/file/d/1aOBCpdN2jiRb7popJZWrejFQ1gknv415/view?usp=sharing). This jupyter notebook can be cleared and re-ran to replicate all of the steps of the analysis.
 
-An RData file, "Sid_Replication_032923.RData" with all of the R objects produced after one run of the script for evidence of reproducibility is available upon request. This dataset can be loaded into the "Sid_Replication_05_18_23.ipynb" jupyter notebook found in IKCTML/Figures/Figures.md to re-generate the figures in our manuscript.
+An RData file, "Sid_Replication_032923.RData" with all of the R objects produced after one run of the script for evidence of reproducibility is available upon request. This dataset can be loaded into the "Sid_Replication_05_18_23.ipynb" jupyter notebook found in IKCTML/Figures/Figures.md to re-generate the figures in our manuscript for further reproducibility.
 
 ## Running XGBoost to Annotate Your Own Data
 
