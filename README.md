@@ -80,13 +80,13 @@ The results published in our manuscript from start to finish, including dataset 
 
 An RData file, "Sid_Replication_032923.RData" with all of the R objects produced after one run of the script for evidence of reproducibility is available upon request. This dataset can be loaded into the "Sid_Replication_05_18_23.ipynb" jupyter notebook found in IKCTML/Figures/Figures.md to re-generate the figures in our manuscript.
 
-## Querying for Merged Object
+## Running XGBoost to Annotate Your Own Data
 
 First, create a [Seurat](https://satijalab.org/seurat/articles/pbmc3k_tutorial.html) object for your data, and upload this object to a Google Drive. 
 
 Second, open our Colab workflow with the link below and follow the included instructions to produce an annotated Seurat object saved to your Google Drive.
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/gist/adtisch/03496b5a255597f71931bc2318a2d4fc/automated-annotation-workflow.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/file/d/1a0tSwn6dWsME9myqjWAQVPfMLavDoHOZ/view?usp=sharing)
 
 ## Questions and Issues
 If you have any questions or run into issues please leave them in the issues tab or contact us by email.
