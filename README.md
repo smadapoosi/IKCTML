@@ -47,7 +47,7 @@ All algorithms showed a strong performance, as visualized in the heatmap below. 
 
 ## Reproductibility
 
-Please start by downloading our dataset, MergedObject_Sid.RDS, from [Zenodo](https://zenodo.org/record/7810913#.ZDMpHuzML0o).
+Please start by downloading our dataset, MergedObject_Sid.RDS, from [Zenodo](https://zenodo.org/record/8303415).
 
 Place the dataset in a directory named data inside the root repository so that you can access it by data/ from the directory containing the Snakefile. (i.e. if root directory was named home, data should be on the path home/data/)
 
@@ -76,9 +76,7 @@ Here's what's happening under the hood:
 * Input: Five train-test split objects produced by IntegrateSome.R
 * Output: Figures and classification report (unknown percentages, F2 scores, and confusion matricies)
 
-The results published in our manuscript from start to finish, including dataset processing, integration, and machine learning, were replicated using the jupyter notebook found here: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/file/d/1aOBCpdN2jiRb7popJZWrejFQ1gknv415/view?usp=sharing). This jupyter notebook can be cleared and re-ran to replicate all of the steps of the analysis.
-
-An RData file, "Sid_Replication_032923.RData" with all of the R objects produced after one run of the script for evidence of reproducibility is available upon request. This dataset can be loaded into the "Sid_Replication_05_18_23.ipynb" jupyter notebook found in IKCTML/Figures/Figures.md ([![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/file/d/1DA_DB6c54rw574YfNUq3KFzLiycBZSoL/view?usp=sharing)) to re-generate the figures in our manuscript for further reproducibility.
+The results published in our manuscript from start to finish, including dataset processing, integration, and machine learning, were replicated using the jupyter notebook found here: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/file/d/1chJkAJvymW2c6JGepO6Iy3A6d2NhxaOD/view?usp=sharing). This jupyter notebook can be cleared and re-ran to replicate all of the steps of the analysis.
 
 ## Running XGBoost to Annotate Your Own Data
 
