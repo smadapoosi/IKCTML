@@ -43,7 +43,7 @@ Our performance testing included 5 different models, listed below, in a rejectio
 All algorithms showed a strong performance, as visualized in the heatmap below. All algorithms performed equally well, and therefore we have given access to one of the algorithms (XGBoost) in a collab link below.
 
 ![image](https://github.com/smadapoosi/IKCTML/blob/4e07b291f39c9a607528d3b94d191d62152a988c/Figures/Figure_PDFs/Fig_5a_Overall_Median_F1_Heatmap%20(2)-1.png)
-![image](https://github.com/smadapoosi/IKCTML/blob/4e07b291f39c9a607528d3b94d191d62152a988c/Figures/Figure_PDFs/Fig_5b_Overall_Percent_Unknpwn_Heatmap%20(2)-1.png)
+![image](https://github.com/smadapoosi/IKCTML/blob/3f68397cd7dd4483d404b2d0d5eb9d4bc63bb6ac/Figures/Figure_PDFs/Fig_5b_Overall_Percent_Unknown_Heatmap%20(2)-1.png)
 
 ## Reproductibility
 
