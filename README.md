@@ -82,7 +82,7 @@ The results published in our manuscript from start to finish, including dataset 
 
 If you would like to use XGBoost to annotate your own data, start by creating a [Seurat](https://satijalab.org/seurat/articles/pbmc3k_tutorial.html) object for your data, and upload this object to a Google Drive. Next, please open our Colab workflow with the link below and follow the included instructions. This will produce an annotated dataset that can be saved to your Google Drive.
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/file/d/1a0tSwn6dWsME9myqjWAQVPfMLavDoHOZ/view?usp=sharing)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/file/d/1tiOjDv0NyaMrzIz2Vd5bben6C6u_kU6C/view?usp=sharing)
 
 ## Questions and Issues
 If you have any questions or run into issues please leave them in the issues tab or contact us by email.
